@@ -118,7 +118,6 @@ async function main() {
     console.log('\n🎉 FINISHED!');
     console.log(`✅ Successfully inserted: ${successCount} recipes`);
     console.log(`❌ Errors: ${errorCount} recipes`);
-    console.log(`📊 Total processed: ${recipes.length} recipes`);
     
   } catch (error) {
     console.error('💥 Fatal error:', error);
