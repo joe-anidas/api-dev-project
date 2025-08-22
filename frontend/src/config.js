@@ -1,5 +1,5 @@
 // API configuration
-export const API_BASE_URL = 'http://localhost:3301/api' || 'https://securin.onrender.com/api';
+export const API_BASE_URL = 'https://securin.onrender.com/api' /* || 'http://localhost:3301/api'*/ ;
 
 // Default pagination settings
 export const DEFAULT_PAGE_SIZE = 15;
