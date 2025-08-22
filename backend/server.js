@@ -1,21 +1,29 @@
 const express = require('express');
 const mysql = require('mysql2/promise');
 const cors = require('cors');
+require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3301;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
-// Database configuration
+// Database configuration using environment variables
 const dbConfig = {
-  host: 'localhost',
-  user: 'root', // Update with your MySQL username
-  password: '', // Update with your MySQL password
-  database: 'securin'
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME
 };
+
+// const dbConfig = {
+//   host: 'localhost',
+//   user: 'root', 
+//   password: '', 
+//   database: 'securin'
+// };
 
 // Create database connection pool
 let pool;
